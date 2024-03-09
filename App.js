@@ -1,24 +1,24 @@
-const parent = React.createElement(
-    "div" , {id : "parent" }, [
-        React.createElement(
-            "div" , {id : "child1"},[
-                React.createElement("h1", {},"this is h1 tag"),
-                React.createElement("h2", {},"this is h2 tag")]),
-                React.createElement(
-                    "div" , {id : "child2"},[
-                        React.createElement("h1", {},"this is h1 tag"),
-                        React.createElement("h2", {},"this is h2 tag"),        
-                             ]         )
-            ]    )
-        
-    
+import React from "react";
+import ReactDom from "react-dom/client";
 
+const elem = (
+    <h1>hello world</h1>
+)
 
+//React Functional component
+const HeadingComponent = () => (
+    <div id = "container">
+        <h1 className = "heading">Namaste React using Functinal Component</h1>
+    </div>
+);
 
+const Title = () =>(
+    <h1 className="head" tabIndex="5">
+        {1+1}
+       Namaste React using JSX
+       </h1>
+   );  
 
+const root = ReactDom.createRoot(document.getElementById("root"));
 
-
-
-
-            const root    = ReactDOM.createRoot(document.getElementById("root"));
-            root.render(parent);
+root.render(<Title/>);
